@@ -1,0 +1,20 @@
+<p>update works!</p>
+<table class="table">
+  <tr>
+    <td>Name</td>
+    <td>Number</td>
+    <td>Description</td>
+    <td>Price</td>
+    <td>Category</td>
+  </tr>
+  <tr>
+    <td><input name="name" type="text" [(ngModel)]="product.productName"></td>
+    <td><input name="number" type="text" [(ngModel)]="product.number"></td>
+    <td><input name="description" type="text" [(ngModel)]="product.description"></td>
+    <td><input name="price" type="text" [(ngModel)]="product.price"></td>
+    <td><select name="category" [(ngModel)]="product.category.categoryId">
+      <option *ngFor="let c of categoryList" [value]="c.categoryId" [textContent]="c.name"></option>
+    </select></td>
+  </tr>
+</table>
+<button (click)="updateProduct()">Update</button>

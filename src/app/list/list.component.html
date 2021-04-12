@@ -1,0 +1,27 @@
+<p>list works!</p>
+
+<div class="container">
+  <button class="btn" [routerLink]="'create'">Add new Product</button>
+  <table class="table">
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Number</td>
+      <td>Description</td>
+      <td>Price</td>
+      <td>Category</td>
+      <td>Update</td>
+      <td>Delete</td>
+    </tr>
+    <tr *ngFor="let p of productList">
+      <td>{{p.productId}}</td>
+      <td>{{p.productName}}</td>
+      <td>{{p.number}}</td>
+      <td>{{p.description}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.category.name}}</td>
+      <td><a [routerLink]="'update/'+p.productId">Update</a></td>
+      <td><button (click)="deleteProductById(p.productId)">Delete</button></td>
+    </tr>
+  </table>
+</div>
