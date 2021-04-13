@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {ProductService} from '../product.service';
-import {IProduct} from '../iproduct';
+import {ProductService} from '../../product.service';
+import {IProduct} from '../../iproduct';
 import {ListComponent} from '../list/list.component';
-import {CategoryService} from '../category.service';
-import {ICategory} from '../icategory';
+import {CategoryService} from '../../category.service';
+import {ICategory} from '../../icategory';
 import {Observable} from 'rxjs';
 
 @Component({

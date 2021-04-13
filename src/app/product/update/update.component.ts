@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
-import {IProduct} from '../iproduct';
+import {IProduct} from '../../iproduct';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
-import {ProductService} from '../product.service';
+import {ProductService} from '../../product.service';
 import {lintSyntaxError} from 'tslint/lib/verify/lintError';
-import {ICategory} from '../icategory';
-import {CategoryService} from '../category.service';
+import {ICategory} from '../../icategory';
+import {CategoryService} from '../../category.service';
 import {ListComponent} from '../list/list.component';
 
 @Component({

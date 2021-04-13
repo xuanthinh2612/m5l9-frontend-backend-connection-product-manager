@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {CategoryService} from '../category.service';
-import {ICategory} from '../icategory';
-import {IProduct} from '../iproduct';
-import {ProductService} from '../product.service';
+import {CategoryService} from '../../category.service';
+import {ICategory} from '../../icategory';
+import {IProduct} from '../../iproduct';
+import {ProductService} from '../../product.service';
 
 @Component({
   selector: 'app-list',
@@ -31,7 +31,7 @@ export class ListComponent implements OnInit {
   }
 
   deleteProductById(id: number) {
-    this.productService.deleteProductById(id).subscribe(() => {
+    this.productService.deleteProductById(id).subscribe(result => {
       this.productList = this.productList.filter(s => s.productId != id);
     });
   }

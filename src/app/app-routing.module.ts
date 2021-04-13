@@ -1,21 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {ListComponent} from './list/list.component';
-import {CreateComponent} from './create/create.component';
-import {UpdateComponent} from './update/update.component';
+import {ListComponent} from './product/list/list.component';
+import {CreateComponent} from './product/create/create.component';
+import {UpdateComponent} from './product/update/update.component';
+import {HomePageComponent} from './home-page/home-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ListComponent
+    component: HomePageComponent
   },
   {
-    path: 'create',
-    component: CreateComponent
-  },
-  {
-    path: 'update/:id',
-    component: UpdateComponent
+    path: 'product',
+    loadChildren: () => import('./product/product.module').then(module => module.ProductModule)
   }
 ];
 
